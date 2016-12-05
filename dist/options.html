@@ -1,0 +1,50 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+
+<head>
+    <title>Livereload</title>
+    <style>
+        body {
+            font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+            font-size: 100%;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            position: relative;
+            box-sizing: border-box;
+            line-height: 32px;
+        }
+
+        label input {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 50px;
+        }
+
+        #save {
+            margin-left: 50px;
+            cursor: pointer;
+        }
+    </style>
+
+    <label for="host">Host <input type="text" name="host" id="host" /></label>
+    <label for="port">Port <input type="number" name="port" id="port" /></label>
+    <button id="save">Save Options</button>
+
+    <div id="status"></div>
+
+    <script src="scripts/options.js"></script>
+</head>
+
+<body></body>
+
+</html>
